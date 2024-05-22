@@ -9,10 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `HTB : Haze's Tech Blog`,
+    description: `Haze의 개발 기록 블로그입니다.`,
+    author: `Haze`,
+    siteUrl: `https://haze-s.github.io/`,
   },
   plugins: [
     {
@@ -22,6 +22,7 @@ module.exports = {
         allExtensions: true,
       },
     },
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

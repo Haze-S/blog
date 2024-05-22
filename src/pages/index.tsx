@@ -1,7 +1,12 @@
+import Header from 'components/Common/Header'
 import React, { FunctionComponent } from 'react'
 
 const IndexPage: FunctionComponent = function () {
-  return <div></div>
+  return (
+    <>
+      <Header />
+    </>
+  )
 }
 
 export default IndexPage
