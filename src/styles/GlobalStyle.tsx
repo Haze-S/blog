@@ -8,7 +8,7 @@ const GlobalStyle: FunctionComponent = function () {
 export default GlobalStyle
 
 const defaultStyle = css`
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Silkscreen:wght@400;700&display=swap');
 
   * {
     padding: 0;
@@ -30,5 +30,10 @@ const defaultStyle = css`
     color: inherit;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  ul,
+  ol {
+    list-style: none;
   }
 `

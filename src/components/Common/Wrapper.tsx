@@ -1,21 +1,22 @@
+import { ReactNode } from 'react'
+import viewSize from 'utils/viewSize'
 import styled from '@emotion/styled'
 import MediaQuery from 'react-responsive'
-import viewSize from 'utils/viewSize'
 
-type WrapperProps = {
-  children: React.ReactNode
+type Props = {
+  children: ReactNode
 }
 
-function Wrapper({ children }: WrapperProps) {
+function Wrapper({ children }: Props) {
   return (
     <div>
       <MediaQuery minWidth={viewSize.PC}>
         <PC>{children}</PC>
       </MediaQuery>
-      <MediaQuery minWidth={viewSize.tablet} maxWidth={viewSize.PC}>
+      <MediaQuery minWidth={viewSize.mobile} maxWidth={viewSize.PC}>
         <Tablet>{children}</Tablet>
       </MediaQuery>
-      <MediaQuery minWidth={viewSize.mobile} maxWidth={viewSize.tablet}>
+      <MediaQuery maxWidth={viewSize.mobile}>
         <Mobile>{children}</Mobile>
       </MediaQuery>
     </div>
