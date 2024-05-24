@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { FunctionComponent, ReactNode } from 'react'
 import viewSize from 'utils/viewSize'
 import styled from '@emotion/styled'
 import MediaQuery from 'react-responsive'
@@ -7,7 +7,7 @@ type Props = {
   children: ReactNode
 }
 
-function Wrapper({ children }: Props) {
+const Wrapper: FunctionComponent<Props> = function ({ children }: Props) {
   return (
     <div>
       <MediaQuery minWidth={viewSize.PC}>

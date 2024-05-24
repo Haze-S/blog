@@ -21,6 +21,7 @@ const defaultStyle = css`
   body,
   #___gatsby {
     height: 100%;
+    font-size: 10px;
   }
 
   a,

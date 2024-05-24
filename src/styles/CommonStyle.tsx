@@ -6,6 +6,7 @@ const CommonStyle = {
     purple04: '#ab57ff',
     purple05: '#9935ff',
     purple06: '#861dee',
+    purple07: '#5603a7',
 
     black: '#000',
     white: '#fff',
