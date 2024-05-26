@@ -5,6 +5,11 @@ export const bold42 = css`
   font-weight: 700;
 `
 
+export const bold36 = css`
+  font-size: 3.6rem;
+  font-weight: 700;
+`
+
 export const bold28 = css`
   font-size: 2.8rem;
   font-weight: 700;

@@ -1,12 +1,13 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent, useState } from 'react'
 import { Link } from 'gatsby'
-import { useMediaQuery } from 'react-responsive'
+import MediaQuery from 'react-responsive'
 import ToggleIcon from './Icon/ToggleIcon'
 import ContactLink from './ContactLink'
 import CategoryList from 'components/Common/CategoryList'
 import styled from '@emotion/styled'
 import CommonStyle from '../../styles/CommonStyle'
-import { bold42, regular24 } from '../../styles/font'
+import { bold36, bold42, regular24 } from '../../styles/font'
+import viewSize from 'utils/viewSize'
 
 const CATEGORY_LIST = {
   ALL: 10,
@@ -16,14 +17,22 @@ const CATEGORY_LIST = {
 }
 
 const Header: FunctionComponent = function () {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  const handleToggle = () => {
+    setIsOpen(isOpen => !isOpen)
+  }
+
   return (
     <Container>
       <Tittle>
         <Link to="/">Haze's Blog</Link>
       </Tittle>
       <LinkList>
-        {isMobile ? <ToggleIcon /> : <div></div>}
+        <MediaQuery maxWidth={viewSize.tablet}>
+          <ToggleIcon onClick={handleToggle} />
+        </MediaQuery>
+
         <CategoryList selectedCategory="Review" categoryList={CATEGORY_LIST} />
         <ContactLink />
       </LinkList>
@@ -36,11 +45,14 @@ export default Header
 const Container = styled.header`
   width: 100%;
   height: 175px;
+  background-color: ${CommonStyle.color.white};
 
   @media (max-width: 768px) {
-    position: relative;
-    height: 100px;
+    position: sticky;
+    top: 0;
+    height: 60px;
     margin-bottom: 40px;
+    z-index: 1;
   }
 `
 
@@ -52,12 +64,16 @@ const Tittle = styled.h1`
   a {
     font-family: 'Silkscreen', sans-serif;
   }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    ${bold36}
+  }
 `
 
 const LinkList = styled.nav`
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 10px 15px;
   border-bottom: 1px solid ${CommonStyle.color.purple02};
   ${regular24}
@@ -70,6 +86,7 @@ const LinkList = styled.nav`
     position: absolute;
     top: 0;
     left: 0;
+    align-items: center;
     width: 100%;
     height: 100%;
   }

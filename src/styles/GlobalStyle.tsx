@@ -33,6 +33,10 @@ const defaultStyle = css`
     cursor: pointer;
   }
 
+  button {
+    border: 0;
+  }
+
   ul,
   ol {
     list-style: none;

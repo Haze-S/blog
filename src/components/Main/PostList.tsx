@@ -21,6 +21,20 @@ const PostList: FunctionComponent = function () {
       <PostItem {...POST_ITEM_DATA} />
       <PostItem {...POST_ITEM_DATA} />
       <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
     </Container>
   )
 }
