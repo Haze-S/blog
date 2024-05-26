@@ -23,7 +23,7 @@ const Header: FunctionComponent = function () {
         <Link to="/">Haze's Blog</Link>
       </Tittle>
       <LinkList>
-        {isMobile ? <ToggleIcon /> : <></>}
+        {isMobile ? <ToggleIcon /> : <div></div>}
         <CategoryList selectedCategory="Review" categoryList={CATEGORY_LIST} />
         <ContactLink />
       </LinkList>
