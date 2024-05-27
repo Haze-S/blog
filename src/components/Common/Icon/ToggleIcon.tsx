@@ -2,11 +2,7 @@ import styled from '@emotion/styled'
 import CommonStyle from '../../../styles/CommonStyle'
 import { FunctionComponent } from 'react'
 
-interface IToggleProps {
-  onClick: () => void
-}
-
-const ToggleIcon: FunctionComponent<IToggleProps> = function () {
+const ToggleIcon: FunctionComponent = function () {
   return (
     <Container>
       <Line />
@@ -18,7 +14,7 @@ const ToggleIcon: FunctionComponent<IToggleProps> = function () {
 
 export default ToggleIcon
 
-const Container = styled.input`
+const Container = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-between;

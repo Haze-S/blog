@@ -44,17 +44,6 @@ export default CategoryList
 const Container = styled.div`
   display: flex;
   gap: 30px;
-
-  @media (max-width: 768px) {
-    justify-content: space-around;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    background-color: ${CommonStyle.color.white};
-    z-index: 1;
-  }
 `
 
 const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (

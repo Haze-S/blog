@@ -5,7 +5,7 @@ import { regular16 } from '../../styles/font'
 const Footer: FunctionComponent = function () {
   return (
     <Container>
-      Thank You for Visiting My Blog, Have a Good Day 😆
+      Thank You for Visiting My Blog 😆
       <br />© 2024 Developer Haze, Powered By Gatsby.
     </Container>
   )
@@ -14,6 +14,7 @@ const Footer: FunctionComponent = function () {
 export default Footer
 
 const Container = styled.p`
+  margin-top: 40px;
   padding: 60px 0;
   text-align: center;
   ${regular16}

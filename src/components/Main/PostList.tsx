@@ -46,4 +46,14 @@ const Container = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   padding: 0 10px;
+
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0 10px;
+  }
 `

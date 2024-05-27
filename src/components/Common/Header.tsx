@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from 'react'
+import { FunctionComponent } from 'react'
 import { Link } from 'gatsby'
 import MediaQuery from 'react-responsive'
 import ToggleIcon from './Icon/ToggleIcon'
@@ -6,7 +6,7 @@ import ContactLink from './ContactLink'
 import CategoryList from 'components/Common/CategoryList'
 import styled from '@emotion/styled'
 import CommonStyle from '../../styles/CommonStyle'
-import { bold36, bold42, regular24 } from '../../styles/font'
+import { bold28, bold42, regular20, regular24 } from '../../styles/font'
 import viewSize from 'utils/viewSize'
 
 const CATEGORY_LIST = {
@@ -17,24 +17,21 @@ const CATEGORY_LIST = {
 }
 
 const Header: FunctionComponent = function () {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-
-  const handleToggle = () => {
-    setIsOpen(isOpen => !isOpen)
-  }
-
   return (
     <Container>
-      <Tittle>
-        <Link to="/">Haze's Blog</Link>
-      </Tittle>
-      <LinkList>
+      <TitleContainer>
         <MediaQuery maxWidth={viewSize.tablet}>
-          <ToggleIcon onClick={handleToggle} />
+          <ToggleIcon />
         </MediaQuery>
-
+        <Tittle>
+          <Link to="/">Haze's Blog</Link>
+        </Tittle>
+      </TitleContainer>
+      <LinkList>
         <CategoryList selectedCategory="Review" categoryList={CATEGORY_LIST} />
-        <ContactLink />
+        <div>
+          <ContactLink />
+        </div>
       </LinkList>
     </Container>
   )
@@ -44,14 +41,14 @@ export default Header
 
 const Container = styled.header`
   width: 100%;
-  height: 175px;
+  margin-bottom: 40px;
   background-color: ${CommonStyle.color.white};
 
   @media (max-width: 768px) {
     position: sticky;
     top: 0;
     height: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     z-index: 1;
   }
 `
@@ -67,7 +64,17 @@ const Tittle = styled.h1`
 
   @media (max-width: 768px) {
     padding: 0;
-    ${bold36}
+    ${bold28}
+  }
+`
+
+const TitleContainer = styled.div`
+  height: 100%;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
   }
 `
 
@@ -83,11 +90,17 @@ const LinkList = styled.nav`
   }
 
   @media (max-width: 768px) {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
     position: absolute;
-    top: 0;
+    top: 60px;
     left: 0;
-    align-items: center;
     width: 100%;
-    height: 100%;
+    padding: 20px 10px;
+    border-bottom: 0;
+    background-color: ${CommonStyle.color.white};
+    ${regular20}
+    z-index: 1;
   }
 `
