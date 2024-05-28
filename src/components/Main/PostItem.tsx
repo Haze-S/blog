@@ -3,15 +3,9 @@ import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import CommonStyle from '../../styles/CommonStyle'
 import { bold14, bold24, regular14, regular16 } from '../../styles/font'
+import { PostFrontmatterType } from 'types/PostItem.types'
 
-type PostItemProps = {
-  title: string
-  date: String
-  tags: string[]
-  summary: string
-  thumbnail: string
-  link: string
-}
+type PostItemProps = PostFrontmatterType & { link: string }
 
 const PostItem: FunctionComponent<PostItemProps> = function ({
   title,
@@ -23,7 +17,7 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
 }) {
   return (
     <Container to={link}>
-      <ThumbnailImage src={thumbnail} alt="Post Image" />
+      <ThumbnailImage src={thumbnail} alt={`${title} 썸네일`} />
       <PostItemContent>
         <Title>{title}</Title>
         <Date>{date}</Date>
