@@ -3,9 +3,16 @@ import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import CommonStyle from '../../styles/CommonStyle'
 import { bold14, bold24, regular14, regular16 } from '../../styles/font'
-import { PostFrontmatterType } from 'types/PostItem.types'
 
-type PostItemProps = PostFrontmatterType & { link: string }
+type PostItemProps = {
+  title: string
+  date: String
+  categories: string[]
+  tags: string[]
+  summary: string
+  thumbnail: string
+  link: string
+}
 
 const PostItem: FunctionComponent<PostItemProps> = function ({
   title,

@@ -15,7 +15,7 @@ export default Footer
 
 const Container = styled.p`
   margin-top: 40px;
-  padding: 60px 0;
+  padding: 20px 0;
   text-align: center;
   ${regular16}
 `

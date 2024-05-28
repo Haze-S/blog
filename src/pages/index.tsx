@@ -63,6 +63,7 @@ export const getPostList = graphql`
             summary
             categories
             tags
+            thumbnail
           }
         }
       }
