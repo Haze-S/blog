@@ -13,7 +13,7 @@ const Footer: FunctionComponent = function () {
 
 export default Footer
 
-const Container = styled.p`
+const Container = styled.footer`
   padding: 50px 0;
   text-align: center;
   ${regular16}

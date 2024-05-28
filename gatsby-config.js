@@ -9,8 +9,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `개발 기록하는 블로그`,
-    description: `Haze의 블로그입니다.`,
+    title: `Haze's Blog`,
+    description: `Haze의 기술 블로그입니다.`,
     author: `Haze`,
     siteUrl: `https://hazeblog.netlify.app/`,
   },

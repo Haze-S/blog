@@ -42,6 +42,9 @@ const Template: FunctionComponent<TemplateProps> = function ({
         <meta name="twitter:image" content={image} />
         <meta name="twitter:site" content="@haze" />
         <meta name="twitter:creator" content="@haze" />
+
+        <html lang="ko" />
+        <link rel="icon" href="./static/favicon.ico" />
       </Helmet>
       <GlobalStyle />
       <Header />

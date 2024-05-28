@@ -25,17 +25,17 @@ const Wrapper: FunctionComponent<Props> = function ({ children }: Props) {
 
 export default Wrapper
 
-const PC = styled.div`
+const PC = styled.main`
   width: 1024px;
   margin: 0 auto;
 `
 
-const Tablet = styled.div`
+const Tablet = styled.main`
   width: 100%;
   padding: 0 20px;
 `
 
-const Mobile = styled.div`
+const Mobile = styled.main`
   width: 100%;
   padding: 0 10px;
 `

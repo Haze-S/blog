@@ -69,7 +69,7 @@ const PrevPageIcon = styled.div`
   }
 `
 
-const Title = styled.div`
+const Title = styled.h2`
   display: -webkit-box;
   overflow: hidden;
   overflow-wrap: break-word;
@@ -85,7 +85,7 @@ const Title = styled.div`
   }
 `
 
-const PostData = styled.div`
+const PostData = styled.p`
   display: flex;
   justify-content: space-between;
   align-items: center;
