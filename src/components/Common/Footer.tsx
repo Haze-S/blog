@@ -17,4 +17,8 @@ const Container = styled.p`
   padding: 50px 0;
   text-align: center;
   ${regular16}
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `

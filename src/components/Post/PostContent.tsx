@@ -110,4 +110,27 @@ d  }
     width: 70%;
     margin: 0 auto;
   }
+
+  // Markdown Responsive Design
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 14px;
+
+    h1 {
+      font-size: 23px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    h3 {
+      font-size: 17px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+  }
 `
