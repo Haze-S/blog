@@ -5,7 +5,7 @@ import PostItem from './PostItem'
 const POST_ITEM_DATA = {
   title: 'Post Item Title',
   date: '2020.01.29.',
-  category: 'Note',
+  categories: ['Review'],
   tags: ['FE', 'Web', 'Event'],
   summary:
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident repellat doloremque fugit quis rem temporibus! Maxime molestias, suntrem debitis odit harum impedit. Modi cupiditate harum dignissimos eos in corrupti!',
@@ -17,20 +17,6 @@ const POST_ITEM_DATA = {
 const PostList: FunctionComponent = function () {
   return (
     <Container>
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
       <PostItem {...POST_ITEM_DATA} />
       <PostItem {...POST_ITEM_DATA} />
       <PostItem {...POST_ITEM_DATA} />
@@ -47,13 +33,11 @@ const Container = styled.div`
   grid-gap: 20px;
   padding: 0 10px;
 
-  @media (max-width: 960px) {
+  @media (max-width: 920px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    width: 100%;
-    padding: 0 10px;
   }
 `

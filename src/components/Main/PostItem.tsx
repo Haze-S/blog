@@ -6,7 +6,7 @@ import { bold14, bold24, regular14, regular16 } from '../../styles/font'
 
 type PostItemProps = {
   title: string
-  date: string
+  date: String
   tags: string[]
   summary: string
   thumbnail: string

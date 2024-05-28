@@ -12,7 +12,7 @@ module.exports = {
     title: `HTB : Haze's Tech Blog`,
     description: `Haze의 개발 기록 블로그입니다.`,
     author: `Haze`,
-    siteUrl: `https://haze-s.github.io/`,
+    siteUrl: `https://hazeblog.netlify.app/`,
   },
   plugins: [
     {
@@ -24,6 +24,7 @@ module.exports = {
     },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-image`,
+    // `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -33,5 +34,43 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-smartypants',
+            options: {
+              dashes: 'oldschool',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 768,
+              quality: 100,
+              withWebp: true,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {},
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow',
+            },
+          },
+        ],
+      },
+    },
   ],
 }
