@@ -22,13 +22,9 @@ const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  position: sticky;
-  top: 0;
   width: 100%;
   padding: 20px 5px;
   border-bottom: 1px solid ${CommonStyle.color.purple05};
-  background-color: ${CommonStyle.color.white};
-  z-index: 1;
 `
 
 const Tittle = styled.h1`

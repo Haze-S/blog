@@ -2,7 +2,7 @@ import { FunctionComponent, ReactNode } from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import CommonStyle from '../../styles/CommonStyle'
-import { regular15 } from '../../styles/font'
+import { regular12, regular16 } from '../../styles/font'
 
 type CategoryItemProps = {
   active: boolean
@@ -33,7 +33,7 @@ const CategoryList: FunctionComponent<CategoryListProps> = function ({
           active={name === selectedCategory}
           key={name}
         >
-          # {name}({count})
+          👾 {name}({count})
         </CategoryItem>
       ))}
     </Container>
@@ -44,18 +44,23 @@ export default CategoryList
 
 const Container = styled.div`
   display: flex;
-  gap: 10px;
-  padding: 20px;
+  gap: 23px;
+  padding: 20px 10px;
 `
 
 const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   <Link {...props} />
 ))<CategoryItemProps>`
-  ${regular15}
+  font-family: 'Silkscreen', sans-serif;
+  ${regular16}
   color: ${({ active }) =>
     active ? CommonStyle.color.purple06 : CommonStyle.color.black};
 
   &:hover {
     color: ${CommonStyle.color.purple06};
+  }
+
+  @media (max-width: 768px) {
+    ${regular12}
   }
 `
