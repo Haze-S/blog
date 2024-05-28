@@ -36,9 +36,4 @@ const defaultStyle = css`
   button {
     border: 0;
   }
-
-  ul,
-  ol {
-    list-style: none;
-  }
 `

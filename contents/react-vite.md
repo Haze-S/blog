@@ -87,8 +87,8 @@ Vite가 빠르고 편리하다는 장점은 있지만 단점이 아예 없는 �
 
 #### ref.
 
-[Vite 가이드](https://ko.vitejs.dev/guide/)
-[[Vue + Vite] 근데 Vite는 뭔가요?](https://analogcode.tistory.com/39)
-[Bonjour, Vite! (Vite 실무 적용기)](https://blog.hectodata.co.kr/bonjour-vite/)
-[[Bundler] JavaScript 번들러 그리고 Webpack , Parcel , Rollup , Vite...](https://velog.io/@wynter_j/Bundler-JavaScript-%EB%B2%88%EB%93%A4%EB%9F%AC-%EA%B7%B8%EB%A6%AC%EA%B3%A0-Webpack-Parcel-Rollup-Vite...-1)
+[Vite 가이드](https://ko.vitejs.dev/guide/)<br/>
+[[Vue + Vite] 근데 Vite는 뭔가요?](https://analogcode.tistory.com/39)<br/>
+[Bonjour, Vite! (Vite 실무 적용기)](https://blog.hectodata.co.kr/bonjour-vite/)<br/>
+[[Bundler] JavaScript 번들러 그리고 Webpack , Parcel , Rollup , Vite...](https://velog.io/@wynter_j/Bundler-JavaScript-%EB%B2%88%EB%93%A4%EB%9F%AC-%EA%B7%B8%EB%A6%AC%EA%B3%A0-Webpack-Parcel-Rollup-Vite...-1)<br/>
 [번들러와 빌드 도구의 이해](https://www.heropy.dev/p/x8iedW)

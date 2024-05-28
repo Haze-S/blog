@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Template from 'components/Common/Template'
 import PostHead from 'components/Post/PostHead'
 import { PostFrontmatterType } from 'types/PostItem.types'
+import PostContent from 'components/Post/PostContent'
 
 export type PostPageItemType = {
   node: {
@@ -27,13 +28,14 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   const {
     node: {
       html,
-      frontmatter: { title, summary, date, tags, thumbnail },
+      frontmatter: { title, date, tags, thumbnail },
     },
   } = edges[0]
 
   return (
     <Template>
       <PostHead title={title} date={date} tags={tags} thumbnail={thumbnail} />
+      <PostContent html={html} />
     </Template>
   )
 }

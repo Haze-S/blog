@@ -9,8 +9,6 @@ thumbnail: 'https://github.com/Haze-S/blog-contents/assets/87344625/807ab80a-96c
 
 # Git flow
 
-![git-flow1](https://github.com/Haze-S/blog-contents/assets/87344625/807ab80a-96c4-481a-866e-8cbc81ce0e6b)
-
 git flow란 Vincent가 2010년에 제시한 [Git 브랜치 전략](https://nvie.com/posts/a-successful-git-branching-model/)으로 여러 사람들이 한 저장소에서 작업을 할 때, 즉 협업 시에 필요한 전략이다. branch의 생성과 삭제, 병합 등 각 행동에 있어서 규칙을 설립하고 각 branch에 의무를 부여하여 개발자들의 혼란을 최대한 줄인다.
 
 당연히 이런 약속들은 팀 내에서 서로 조율을 통해 정해도 되지만 git flow와 같이 긍정적인 효과로 많은 사람들이 사용하고 있는 전략을 사용하면 팀원 모두의 이해와 중간에 투입되는 인원의 이해도 쉬울 것이다. 이번 글에선 git flow가 어떤 전략으로 구성되어 있는 지 정리해본다.
