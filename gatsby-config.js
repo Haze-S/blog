@@ -9,8 +9,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `HTB : Haze's Tech Blog`,
-    description: `Haze의 개발 기록 블로그입니다.`,
+    title: `개발 기록하는 블로그`,
+    description: `Haze의 블로그입니다.`,
     author: `Haze`,
     siteUrl: `https://hazeblog.netlify.app/`,
   },
@@ -24,7 +24,7 @@ module.exports = {
     },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-image`,
-    // `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
