@@ -1,15 +1,12 @@
 import { FunctionComponent, useMemo } from 'react'
-import Header from 'components/Common/Header'
 import PostList, { PostType } from 'components/Main/PostList'
-import Footer from 'components/Common/Footer'
-import Wrapper from 'components/Common/Wrapper'
-import GlobalStyle from '../styles/GlobalStyle'
-import CategoryList, { CategoryListProps } from 'components/Common/CategoryList'
+import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
 import styled from '@emotion/styled'
 import CommonStyle from '../styles/CommonStyle'
 import { graphql } from 'gatsby'
 import { PostListItemType } from 'types/PostItem.types'
 import queryString, { ParsedQuery } from 'query-string'
+import Template from 'components/Common/Template'
 
 type IndexPageProps = {
   location: {
@@ -60,18 +57,15 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
   )
 
   return (
-    <Wrapper>
-      <GlobalStyle />
+    <Template>
       <HeaderContainer>
-        <Header />
         <CategoryList
           selectedCategory={selectedCategory}
           categoryList={categoryList}
         />
       </HeaderContainer>
       <PostList selectedCategory={selectedCategory} posts={edges} />
-      <Footer />
-    </Wrapper>
+    </Template>
   )
 }
 
