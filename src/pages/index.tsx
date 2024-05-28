@@ -1,16 +1,20 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent, useMemo } from 'react'
 import Header from 'components/Common/Header'
-import PostList from 'components/Main/PostList'
+import PostList, { PostType } from 'components/Main/PostList'
 import Footer from 'components/Common/Footer'
 import Wrapper from 'components/Common/Wrapper'
 import GlobalStyle from '../styles/GlobalStyle'
-import CategoryList from 'components/Common/CategoryList'
+import CategoryList, { CategoryListProps } from 'components/Common/CategoryList'
 import styled from '@emotion/styled'
 import CommonStyle from '../styles/CommonStyle'
 import { graphql } from 'gatsby'
 import { PostListItemType } from 'types/PostItem.types'
+import queryString, { ParsedQuery } from 'query-string'
 
 type IndexPageProps = {
+  location: {
+    search: string
+  }
   data: {
     allMarkdownRemark: {
       edges: PostListItemType[]
@@ -18,26 +22,54 @@ type IndexPageProps = {
   }
 }
 
-const CATEGORY_LIST = {
-  ALL: 10,
-  Note: 5,
-  Review: 3,
-  Test: 2,
-}
-
 const IndexPage: FunctionComponent<IndexPageProps> = function ({
+  location: { search },
   data: {
     allMarkdownRemark: { edges },
   },
 }) {
+  const parsed: ParsedQuery<string> = queryString.parse(search)
+  const selectedCategory: string =
+    typeof parsed.category !== 'string' || !parsed.category
+      ? 'All'
+      : parsed.category
+
+  const categoryList = useMemo(
+    () =>
+      edges.reduce(
+        (
+          list: CategoryListProps['categoryList'],
+          {
+            node: {
+              frontmatter: { categories },
+            },
+          }: PostType,
+        ) => {
+          categories.forEach(category => {
+            if (list[category] === undefined) list[category] = 1
+            else list[category]++
+          })
+
+          list['All']++
+
+          return list
+        },
+        { All: 0 },
+      ),
+    [],
+  )
+
   return (
     <Wrapper>
       <GlobalStyle />
       <HeaderContainer>
         <Header />
-        <CategoryList selectedCategory="Review" categoryList={CATEGORY_LIST} />
+        <CategoryList
+          selectedCategory={selectedCategory}
+          categoryList={categoryList}
+        />
       </HeaderContainer>
-      <PostList posts={edges} />
+      <PostList selectedCategory={selectedCategory} posts={edges} />
       <Footer />
     </Wrapper>
   )
