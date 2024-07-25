@@ -9,7 +9,6 @@ type PostItemProps = {
   date: String
   categories: string[]
   tags: string[]
-  summary: string
   thumbnail: string
   link: string
 }
@@ -18,7 +17,6 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
   title,
   date,
   tags,
-  summary,
   thumbnail,
   link,
 }) {
@@ -26,14 +24,13 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
     <Container to={link}>
       <ThumbnailImage src={thumbnail} alt={`${title} 썸네일`} />
       <PostItemContent>
-        <Title>{title}</Title>
-        <Date>{date}</Date>
         <Tags>
           {tags.map(tag => (
-            <TagItem key={tag}>{tag}</TagItem>
+            <TagItem key={tag}>#{tag}</TagItem>
           ))}
         </Tags>
-        <Summary>{summary}</Summary>
+        <Title>{title}</Title>
+        <Date>{date}</Date>
       </PostItemContent>
     </Container>
   )
@@ -43,6 +40,7 @@ export default PostItem
 
 const Container = styled(Link)`
   display: flex;
+  height: 400px;
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 0 0 8px ${CommonStyle.color.purple02};
@@ -67,6 +65,7 @@ const PostItemContent = styled.div`
 `
 const Title = styled.h2`
   display: -webkit-box;
+  height: 60%;
   ${bold24}
   text-overflow: ellipsis;
   white-space: normal;
@@ -78,36 +77,22 @@ const Title = styled.h2`
 const Date = styled.p`
   ${regular14}
   opacity: 0.9;
+  margin-bottom: 8px;
 `
 
 const Tags = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 10px 0;
+  margin-bottom: 15px;
 `
 
 const TagItem = styled.span`
   display: inline-block;
   margin: 0 3px;
-  padding: 0 5px;
-  border-radius: 3px;
-  background: ${CommonStyle.color.purple07};
   ${bold14}
-  color: ${CommonStyle.color.white};
+  color: ${CommonStyle.color.purple07};
 
   &:first-child {
     margin-left: 0;
   }
-`
-
-const Summary = styled.p`
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
-  overflow-wrap: break-word;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  ${regular16}
-  opacity: 0.8;
 `

@@ -24,7 +24,7 @@ const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
       </PrevPageIcon>
       <Title>{title}</Title>
       <PostData>
-        <div>{tags.join(' / ')}</div>
+        <div>{tags.join(', ')}</div>
         <div>{date}</div>
       </PostData>
     </PostHeadInfoWrapper>

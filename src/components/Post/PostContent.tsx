@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
-import { regular16 } from '../../styles/font'
+import { regular18 } from '../../styles/font'
 import CommonStyle from '../../styles/CommonStyle'
 
 interface PostContentProps {
@@ -17,14 +17,14 @@ const MarkdownRenderer = styled.div`
   // Renderer Style
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 86%;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 30px 0 70px 0;
   word-break: break-all;
 
   // Markdown Style
   line-height: 1.8;
-  ${regular16}
+  ${regular18}
 
   // Apply Padding Attribute to All Elements
   p {
@@ -34,14 +34,20 @@ const MarkdownRenderer = styled.div`
   // Adjust Heading Element Style
   h1,
   h2,
-  h3 {
-    font-weight: 800;
-d  }
+  h3,
+  h4,
+  h5 {
+    font-weight: 700;
+    margin-left: -10px;
+  }
 
   * + h1,
   * + h2,
-  * + h3 {
-    margin-top: 10px;
+  * + h3,
+  * + h4,
+  * + h5 {
+    margin-top: 15px;
+    margin-bottom: 10px;
   }
 
   hr + h1,
@@ -51,15 +57,23 @@ d  }
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   h2 {
-    font-size: 25px;
+    font-size: 32px;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 27px;
+  }
+
+  h5 {
+    font-size: 25px;
   }
 
   // Adjust Quotation Element Style
@@ -67,7 +81,17 @@ d  }
     margin: 30px 0;
     padding: 5px 15px;
     border-left: 2px solid ${CommonStyle.color.purple01};
-    font-weight: 800;
+    font-weight: 700;
+  }
+
+  pre {
+    background-color: #222 !important;
+    border-radius: 8px;
+  }
+
+  code:not(pre > code) {
+    background-color: #eee !important;
+    color: #f0506e !important;
   }
 
   // Adjust List Element Style
@@ -117,20 +141,27 @@ d  }
     font-size: 14px;
 
     h1 {
-      font-size: 23px;
+      font-size: 28px;
     }
 
     h2 {
-      font-size: 20px;
+      font-size: 25px;
     }
 
     h3 {
+      font-size: 23px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+
+    h5 {
       font-size: 17px;
     }
 
     img {
       width: 100%;
     }
-
   }
 `
