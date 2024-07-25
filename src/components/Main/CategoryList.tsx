@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import CommonStyle from '../../styles/CommonStyle'
@@ -21,10 +21,7 @@ export type CategoryListProps = {
   }
 }
 
-const CategoryList: FunctionComponent<CategoryListProps> = function ({
-  selectedCategory,
-  categoryList,
-}) {
+function CategoryList({ selectedCategory, categoryList }: CategoryListProps) {
   return (
     <Container>
       {Object.entries(categoryList).map(([name, count]) => (

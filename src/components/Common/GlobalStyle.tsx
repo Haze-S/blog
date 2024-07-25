@@ -1,7 +1,6 @@
-import { FunctionComponent } from 'react'
 import { Global, css } from '@emotion/react'
 
-const GlobalStyle: FunctionComponent = function () {
+function GlobalStyle() {
   return <Global styles={defaultStyle} />
 }
 

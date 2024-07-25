@@ -1,10 +1,9 @@
-import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import GlobalStyle from 'components/Common/GlobalStyle'
 import CommonStyle from '../styles/CommonStyle'
 
-const NotFoundPage: FunctionComponent = function () {
+function NotFoundPage() {
   return (
     <Container>
       <GlobalStyle />

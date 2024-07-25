@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactNode } from 'react'
+import { ReactNode } from 'react'
 import Footer from 'components/Common/Footer'
 import Wrapper from './Wrapper'
 import GlobalStyle from 'components/Common/GlobalStyle'
@@ -13,13 +13,7 @@ type TemplateProps = {
   children: ReactNode
 }
 
-const Template: FunctionComponent<TemplateProps> = function ({
-  title,
-  description,
-  url,
-  image,
-  children,
-}) {
+function Template({ title, description, url, image, children }: TemplateProps) {
   return (
     <Wrapper>
       <Helmet>

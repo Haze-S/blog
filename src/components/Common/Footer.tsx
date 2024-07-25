@@ -1,8 +1,7 @@
-import { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import { regular16 } from '../../styles/font'
 
-const Footer: FunctionComponent = function () {
+function Footer() {
   return (
     <Container>
       Thank You for Visiting My Blog 😆

@@ -1,8 +1,7 @@
-import { FunctionComponent } from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import CommonStyle from '../../styles/CommonStyle'
-import { bold14, bold24, regular14, regular16 } from '../../styles/font'
+import { bold14, bold24, regular14 } from '../../styles/font'
 
 type PostItemProps = {
   title: string
@@ -13,13 +12,7 @@ type PostItemProps = {
   link: string
 }
 
-const PostItem: FunctionComponent<PostItemProps> = function ({
-  title,
-  date,
-  tags,
-  thumbnail,
-  link,
-}) {
+function PostItem({ title, date, tags, thumbnail, link }: PostItemProps) {
   return (
     <Container to={link}>
       <ThumbnailImage src={thumbnail} alt={`${title} 썸네일`} />

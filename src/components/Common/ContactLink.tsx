@@ -1,11 +1,10 @@
-import { FunctionComponent } from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import CommonStyle from '../../styles/CommonStyle'
 import GitHubIcon from 'components/Common/Icon/GitHubIcon'
 import MailIcon from 'components/Common/Icon/MailIcon'
 
-const ContactLink: FunctionComponent = function () {
+function ContactLink() {
   return (
     <Container>
       <Div>

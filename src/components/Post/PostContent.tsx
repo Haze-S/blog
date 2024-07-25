@@ -1,4 +1,3 @@
-import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import { regular18 } from '../../styles/font'
 import CommonStyle from '../../styles/CommonStyle'
@@ -7,7 +6,7 @@ interface PostContentProps {
   html: string
 }
 
-const PostContent: FunctionComponent<PostContentProps> = function ({ html }) {
+function PostContent({ html }: PostContentProps) {
   return <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
 }
 

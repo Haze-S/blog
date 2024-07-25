@@ -1,4 +1,4 @@
-import { FunctionComponent, useMemo } from 'react'
+import { useMemo } from 'react'
 import PostList, { PostType } from 'components/Main/PostList'
 import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
 import styled from '@emotion/styled'
@@ -26,7 +26,7 @@ type IndexPageProps = {
   }
 }
 
-const IndexPage: FunctionComponent<IndexPageProps> = function ({
+function IndexPage({
   location: { search },
   data: {
     site: {
@@ -34,7 +34,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
     },
     allMarkdownRemark: { edges },
   },
-}) {
+}: IndexPageProps) {
   const parsed: ParsedQuery<string> = queryString.parse(search)
   const selectedCategory: string =
     typeof parsed.category !== 'string' || !parsed.category

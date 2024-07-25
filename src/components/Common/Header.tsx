@@ -1,11 +1,10 @@
-import { FunctionComponent } from 'react'
 import { Link } from 'gatsby'
 import ContactLink from './ContactLink'
 import styled from '@emotion/styled'
 import CommonStyle from '../../styles/CommonStyle'
 import { bold24, bold42 } from '../../styles/font'
 
-const Header: FunctionComponent = function () {
+function Header() {
   return (
     <Container>
       <Tittle>

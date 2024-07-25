@@ -1,4 +1,3 @@
-import { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import PostItem from './PostItem'
 import { PostListItemType } from 'types/PostItem.types'
@@ -25,10 +24,7 @@ type PostListProps = {
   posts: PostListItemType[]
 }
 
-const PostList: FunctionComponent<PostListProps> = function ({
-  selectedCategory,
-  posts,
-}) {
+function PostList({ selectedCategory, posts }: PostListProps) {
   const { containerRef, postList }: useInfiniteScrollType = useInfiniteScroll(
     selectedCategory,
     posts,

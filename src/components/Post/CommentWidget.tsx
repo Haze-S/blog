@@ -1,4 +1,4 @@
-import React, { createRef, FunctionComponent, useEffect } from 'react'
+import React, { createRef, useEffect } from 'react'
 
 const src = 'https://utteranc.es/client.js'
 const repo = 'Haze-S/blog'
@@ -13,7 +13,7 @@ type UtterancesAttributesType = {
   async: string
 }
 
-const CommentWidget: FunctionComponent = function () {
+function CommentWidget() {
   const element = createRef<HTMLDivElement>()
 
   useEffect(() => {

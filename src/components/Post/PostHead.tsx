@@ -1,4 +1,3 @@
-import { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import PostHeadInfo, { PostHeadInfoProps } from './PostHeadInfo'
 
@@ -6,12 +5,7 @@ type PostHeadProps = PostHeadInfoProps & {
   thumbnail: string
 }
 
-const PostHead: FunctionComponent<PostHeadProps> = function ({
-  title,
-  date,
-  tags,
-  thumbnail,
-}) {
+function PostHead({ title, date, tags, thumbnail }: PostHeadProps) {
   return (
     <PostHeadWrapper>
       <BackgroundImage src={thumbnail} alt={`${title} thumbnail`} />
