@@ -30,7 +30,7 @@ function IndexPage({
   location: { search },
   data: {
     site: {
-      siteMetadata: { title, description, siteUrl },
+      siteMetadata: { title, siteUrl },
     },
     allMarkdownRemark: { edges },
   },
@@ -67,12 +67,7 @@ function IndexPage({
   )
 
   return (
-    <Template
-      title={title}
-      description={description}
-      url={siteUrl}
-      image="logo.png"
-    >
+    <Template title={title} url={siteUrl} image="logo.png">
       <HeaderContainer>
         <CategoryList
           selectedCategory={selectedCategory}
@@ -111,7 +106,6 @@ export const getPostList = graphql`
           frontmatter {
             title
             date(formatString: "YYYY.MM.DD.")
-            summary
             categories
             tags
             thumbnail

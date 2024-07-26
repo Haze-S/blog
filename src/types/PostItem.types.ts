@@ -3,7 +3,6 @@ export type PostFrontmatterType = {
   date: string
   categories: string[]
   tags: string[]
-  summary: string
   thumbnail: string
 }
 

@@ -32,12 +32,12 @@ function PostTemplate({
   const {
     node: {
       html,
-      frontmatter: { title, summary, date, tags, thumbnail },
+      frontmatter: { title, date, tags, thumbnail },
     },
   } = edges[0]
 
   return (
-    <Template title={title} description={summary} url={href} image={thumbnail}>
+    <Template title={title} url={href} image={thumbnail}>
       <PostHead title={title} date={date} tags={tags} thumbnail={thumbnail} />
       <PostContent html={html} />
       <CommentWidget />
@@ -55,7 +55,6 @@ export const queryMarkdownDataBySlug = graphql`
           html
           frontmatter {
             title
-            summary
             date(formatString: "YYYY.MM.DD.")
             tags
             thumbnail

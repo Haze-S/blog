@@ -10,7 +10,6 @@ export type PostType = {
     id: string
     frontmatter: {
       title: string
-      summary: string
       date: string
       categories: string[]
       tags: string[]
